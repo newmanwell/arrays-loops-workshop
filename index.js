@@ -73,7 +73,7 @@ const getMax = (array) => {
   let currentLargest = array[0];
   // Loop through the array starting with the first index
   for (let idx = 1; idx < array.length; idx++) {
-  // Create conditional that compares the current largest to the next index value
+    // Create conditional that compares the current largest to the next index value
     if (array[idx] > currentLargest) {
       // Reassign current largest number variable to the new index value (if larger)
       currentLargest = array[idx];
@@ -82,3 +82,30 @@ const getMax = (array) => {
   console.log(currentLargest);
 }
 getMax(numberArray);
+
+// Range function
+const getRange = (array) => {
+  // Store largest number starting with the zeroth index
+  let currentLargest = array[0];
+  // Store smallest number staring with the zeroth index
+  let currentSmallest = array[0];
+  // Loop through the array for the largest index value
+  for (let idx = 1; idx < array.length; idx++) {
+    // Create conditional that compares the current largest to the next index value
+    if (array[idx] > currentLargest) {
+      // Reassign current largest variable if it is larger
+      currentLargest = array[idx];
+    }
+  }
+  // Loop through the array for the smallest index value
+  for (let idx = 1; idx < array.length; idx++) {
+    // Create conditional that compares the current smallest to the next index value
+    if (array[idx] < currentSmallest) {
+      currentSmallest = array[idx];
+    }
+  }
+  // Subract to find the range
+  const range = currentLargest - currentSmallest;
+  console.log(range);
+}
+getRange(numberArray);
