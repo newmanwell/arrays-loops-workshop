@@ -25,7 +25,7 @@ getLength(numberArray);
 
 // Sum function
 const getSum = (array) => {
-  // Assign an initil value
+  // Assign an initial value
   let sum = 0;
   // Loop through the array 
   for (let idx = 0; idx < array.length; idx++) {
@@ -35,3 +35,19 @@ const getSum = (array) => {
   console.log(sum);
 }
 getSum(numberArray);
+
+// Mean function
+
+const getMean = (array) => {
+  // Assign an initial value
+  let sum = 0;
+  // Loop through the array
+  for (let idx = 0; idx < array.length; idx++) {
+    // Add to the value
+    sum = sum + array[idx];
+  }
+  // Calculate the average
+  average = sum / array.length;
+  console.log(average);
+}
+getMean(numberArray);
