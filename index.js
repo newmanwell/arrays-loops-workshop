@@ -37,7 +37,6 @@ const getSum = (array) => {
 getSum(numberArray);
 
 // Mean function
-
 const getMean = (array) => {
   // Assign an initial value
   let sum = 0;
@@ -51,3 +50,19 @@ const getMean = (array) => {
   console.log(average);
 }
 getMean(numberArray);
+
+// Min function
+const getMin = (array) => {
+  // Start with the Zeroth index
+  let currentSmallest = array[0];
+  // Loop through the array starting with the first index
+  for (let idx = 1; idx < array.length; idx++) {
+    // Create conditional that compares the current smallest to the next index value
+    if (array[idx] < currentSmallest) {
+      // Reassign current smallest number variable to the new index value
+      currentSmallest = array[idx];
+    }
+  }
+  console.log(currentSmallest);
+}
+getMin(numberArray);
