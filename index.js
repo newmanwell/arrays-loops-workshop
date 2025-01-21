@@ -59,10 +59,26 @@ const getMin = (array) => {
   for (let idx = 1; idx < array.length; idx++) {
     // Create conditional that compares the current smallest to the next index value
     if (array[idx] < currentSmallest) {
-      // Reassign current smallest number variable to the new index value
+      // Reassign current smallest number variable to the new index value (if smaller)
       currentSmallest = array[idx];
     }
   }
   console.log(currentSmallest);
 }
 getMin(numberArray);
+
+//Max function
+const getMax = (array) => {
+  // Start with the zeroth index
+  let currentLargest = array[0];
+  // Loop through the array starting with the first index
+  for (let idx = 1; idx < array.length; idx++) {
+  // Create conditional that compares the current largest to the next index value
+    if (array[idx] > currentLargest) {
+      // Reassign current largest number variable to the new index value (if larger)
+      currentLargest = array[idx];
+    }
+  }
+  console.log(currentLargest);
+}
+getMax(numberArray);
