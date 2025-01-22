@@ -130,13 +130,12 @@ getEvens(numberArray);
 //Odds function
 const getOdds = (array) => {
   // Create empty array to push odd numbers to
-  // Create loop for argument array
-  // Create conditional to find odd numbers using modulus
-  // Push odd numbers to empty array
-
   const oddNumberArray = [];
+  // Create loop for argument array
   for (let idx = 0; idx < array.length; idx++) {
+    // Create conditional to find odd numbers using modulus
     if (array[idx] % 2 === 1) {
+      // Push odd numbers to empty array
       oddNumberArray.push(array[idx]);
     }
   }
