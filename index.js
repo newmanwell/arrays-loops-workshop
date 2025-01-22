@@ -117,7 +117,7 @@ const getEvens = (array) => {
   const evenNumberArray = [];
   // Create loop for the argument array
   for (let idx = 0; idx < array.length; idx++) {
-    // Create conditional to fin even numbers using modulus
+    // Create conditional to find even numbers using modulus
     if (array[idx] % 2 === 0) {
       // Push even numbers to the empty array
       evenNumberArray.push(array[idx]);
@@ -126,3 +126,20 @@ const getEvens = (array) => {
   console.log(evenNumberArray);
 }
 getEvens(numberArray);
+
+//Odds function
+const getOdds = (array) => {
+  // Create empty array to push odd numbers to
+  // Create loop for argument array
+  // Create conditional to find odd numbers using modulus
+  // Push odd numbers to empty array
+
+  const oddNumberArray = [];
+  for (let idx = 0; idx < array.length; idx++) {
+    if (array[idx] % 2 === 1) {
+      oddNumberArray.push(array[idx]);
+    }
+  }
+  console.log(oddNumberArray);
+}
+getOdds(numberArray);
