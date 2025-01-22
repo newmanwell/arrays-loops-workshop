@@ -101,6 +101,7 @@ const getRange = (array) => {
   for (let idx = 1; idx < array.length; idx++) {
     // Create conditional that compares the current smallest to the next index value
     if (array[idx] < currentSmallest) {
+      // Reassign current smallest variable if it is smaller
       currentSmallest = array[idx];
     }
   }
@@ -109,3 +110,19 @@ const getRange = (array) => {
   console.log(range);
 }
 getRange(numberArray);
+
+//Evens function
+const getEvens = (array) => {
+  // Create empty array to push even numbers to
+  const evenNumberArray = [];
+  // Create loop for the argument array
+  for (let idx = 0; idx < array.length; idx++) {
+    // Create conditional to fin even numbers using modulus
+    if (array[idx] % 2 === 0) {
+      // Push even numbers to the empty array
+      evenNumberArray.push(array[idx]);
+    }
+  }
+  console.log(evenNumberArray);
+}
+getEvens(numberArray);
